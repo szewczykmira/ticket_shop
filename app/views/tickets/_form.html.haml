@@ -11,7 +11,7 @@
     = f.select(:customer_id, options_from_collection_for_select(Customer.all, :id, :name),)
   .field
     = f.label :gig_id
-    = f.select(:gig_id, options_from_collection_for_select(Gig.all, :id, :),)
+    = f.select(:gig_id, options_from_collection_for_select(Gig.all, :id, :band),)
   .field
     = f.label :paid
     = f.check_box :paid
