@@ -11,8 +11,8 @@
 
   - @tickets.each do |ticket|
     %tr
-      %td= ticket.customer_id
-      %td= ticket.gig_id
+      %td= link_to ticket.customer.name, ticket.customer
+      %td= link_to ticket.gig.band, ticket.gig
       %td= ticket.paid
       %td= link_to 'Show', ticket
       %td= link_to 'Edit', edit_ticket_path(ticket)

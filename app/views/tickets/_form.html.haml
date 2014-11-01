@@ -8,10 +8,10 @@
 
   .field
     = f.label :customer_id
-    = f.number_field :customer_id
+    = f.select(:customer_id, options_from_collection_for_select(Customer.all, :id, :name),)
   .field
     = f.label :gig_id
-    = f.number_field :gig_id
+    = f.select(:gig_id, options_from_collection_for_select(Gig.all, :id, :),)
   .field
     = f.label :paid
     = f.check_box :paid

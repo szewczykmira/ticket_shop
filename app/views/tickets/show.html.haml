@@ -2,10 +2,11 @@
 
 %p
   %b Customer:
-  = @ticket.customer_id
+  = link_to @ticket.customer.name, @ticket.customer
 %p
   %b Gig:
-  = @ticket.gig_id
+  = link_to @ticket.gig.date, @ticket.gig
+  = link_to @ticket.gig.band, @ticket.gig
 %p
   %b Paid:
   = @ticket.paid
