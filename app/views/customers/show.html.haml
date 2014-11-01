@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @customer.name
+%p
+  %b Email:
+  = @customer.email
+%p
+  %b Phonenumber:
+  = @customer.phonenumber
+%p
+  %b Adress:
+  = @customer.adress
+
+= link_to 'Edit', edit_customer_path(@customer)
+\|
+= link_to 'Back', customers_path

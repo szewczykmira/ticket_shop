@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Date:
+  = @gig.date
+%p
+  %b Band:
+  = @gig.band
+%p
+  %b Price:
+  = @gig.price
+
+= link_to 'Edit', edit_gig_path(@gig)
+\|
+= link_to 'Back', gigs_path

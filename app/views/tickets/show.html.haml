@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Customer:
+  = @ticket.customer_id
+%p
+  %b Gig:
+  = @ticket.gig_id
+%p
+  %b Paid:
+  = @ticket.paid
+
+= link_to 'Edit', edit_ticket_path(@ticket)
+\|
+= link_to 'Back', tickets_path
